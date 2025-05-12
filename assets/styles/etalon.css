@@ -92,16 +92,18 @@ header {
     margin: 0;
 }
 .button {
-    background: var(--quinary-color);
-    color: var(--text-color-dark);
-    font-size: var(--font-size-xxs);
-    font-weight: var(--font-weight-sm);
     line-height: 100%;
     text-decoration: none;
     padding: 16px 40px;
     border-radius: 6px;
-    margin-top: 24px;
     display: inline-block;
+    font-size: var(--font-size-xxs);
+    font-weight: var(--font-weight-sm);
+}
+.collection {
+    background: var(--quinary-color);
+    color: var(--text-color-dark);
+    margin-top: 24px;
 }
 .imagewrapper {
     position: relative;
@@ -149,5 +151,64 @@ header {
 .logobar svg {
     height: 10px;
     width: auto;
-
+}
+.newcollection {
+    padding: 32px 15px;
+}
+.secondary-title {
+    font-weight: var(--font-weight-sm);
+    font-size: var(--font-size-xxxl);
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+.wrapper {
+    border-radius: 24px;
+    margin-top: 32px;
+    padding-top: 18px;
+    position: relative;
+}
+.jacket {
+    background-color: #C5C2CA;
+}
+.wrappertext {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-lg);
+    line-height: 100%;
+    margin: 0 auto 32px 18px;
+}
+.jacketimg {
+    transform: rotateY(-180deg);
+    display: block;
+    margin: 0 auto;
+}
+.discover {
+    background: var(--text-color-dark);
+    color: var(--text-color-light);
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+}
+.shades {
+    background-color: var(--quinary-color);
+    padding-top: 30px;
+}
+.shadestext {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    text-align: center;
+}
+.discount {
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-lg);
+    font-size: var(--font-size-md);
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
 }
