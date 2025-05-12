@@ -17,6 +17,8 @@ body {margin: 0;
     --quinary-color: #FDDE67;
     --senary-color: #C5C2CA;
     --septenary-color: #181818;
+    --octonary-color: #E9E9E9;
+
 
     --text-color-dark: #000000;
     --text-color-light: #FFFFFF;
@@ -211,4 +213,78 @@ header {
     top: 50%;
     transform: translateY(-50%);
     right: 40px;
+}
+.bestsellers {
+    background-color: var(--octonary-color);
+    padding: 32px 15px;
+}
+.slider {
+    margin-top: 32px;
+    display: inline-flex;
+    overflow-x: scroll;
+    gap: 35px;
+}
+.slider li {
+    width: 228px;
+}
+.item-wrapper {
+    height: 220px;
+    width: 100%;
+    border-radius: 24px;
+    background-color: var(--text-color-light);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.item-wrapper svg {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    fill: var(--septenary-color);
+}
+
+.item-name {
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-md);
+    font-size: var(--font-size-xs);
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    margin: 0;
+}
+.item-price {
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-xs);
+    font-size: var(--font-size-xxs);
+    line-height: 150%;
+    letter-spacing: 0%;
+    margin: 0;
+    opacity: 0.6;
+}
+.old-price {
+    opacity: 0.2;
+    text-decoration: line-through;
+    margin-right: 12px;
+
+}
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.item-details a {
+    width: 30px;
+    aspect-ratio: 1/1;;
+    padding: 7px;
+    border-radius: 6px;
+    background-color: var(--quinary-color);
+    display: flex;
+}
+.item-details a svg {
+    width: 16px;
+    height: 16px;
 }
