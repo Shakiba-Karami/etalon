@@ -27,6 +27,7 @@ body {margin: 0;
     --font-primary: 'Lato', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
 
+    --font-size-xxxs: 12px;
     --font-size-xxs: 14px;
     --font-size-xs: 16px;
     --font-size-sm: 18px;
@@ -238,12 +239,38 @@ header {
     justify-content: center;
     margin-bottom: 16px;
 }
-
+.item-wrapper input {
+    display: none;
+}
 .item-wrapper svg {
     position: absolute;
     top: 16px;
     right: 16px;
     fill: var(--septenary-color);
+}
+
+.item-wrapper input:checked~label svg {
+    fill: red;
+    stroke: none;
+    
+}
+.discount-tag {
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: var(--secondary-color);
+    padding: 3px 6px;
+    border-radius: 6px;
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-xs);
+    font-size: var(--font-size-xxxs);
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: var(--text-color-light);
+    text-align: center;
+
 }
 
 .item-name {
@@ -287,4 +314,44 @@ header {
 .item-details a svg {
     width: 16px;
     height: 16px;
+}
+.timer {
+    background-color: var(--tertiary-color);
+    padding: 32px 15px;
+    color: var(--text-color-light);
+    text-align: center;
+}
+.timer-title {
+    font-weight: var(--font-weight-lg);
+    font-size: var(--font-size-xxxl);
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0 auto 32px auto;
+
+}
+.timer-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.timer-item {
+    width: 54px;
+    font-family: var(--font-secondary);
+}
+.timer-number {
+    font-weight: var(--font-weight-lg);
+    font-size: var(--font-size-md);
+    line-height: 150%;
+    letter-spacing: 0%;
+    padding: 12px 0;
+    background-color: #18181840;
+    border-radius: 8px;
+    margin: 0;
+}
+.timer-text {
+    font-weight: var(--font-weight-xs);
+    font-size: var(--font-size-xxxs);
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 12px 0 0 0;
 }
