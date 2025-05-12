@@ -2,17 +2,152 @@
     box-sizing: border-box;}
 body {margin: 0;
     padding: 0;
-    font-family: "";
+    font-family: var(--font-primary);
 }
 .container {
-    width: ;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
+}
+:root {
+    --primary-color: #2A4032;
+    --secondary-color: #3A5E46;
+    --tertiary-color: #3B5F47;
+    --quaternary-color: #1B2D22;
+    --quinary-color: #FDDE67;
+    --senary-color: #C5C2CA;
+    --septenary-color: #181818;
+
+    --text-color-dark: #000000;
+    --text-color-light: #FFFFFF;
+
+
+    --font-primary: 'Lato', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+
+    --font-size-xxs: 14px;
+    --font-size-xs: 16px;
+    --font-size-sm: 18px;
+    --font-size-md: 24px;
+    --font-size-lg: 25px;
+    --font-size-xl: 26px;
+    --font-size-xxl: 30px;
+    --font-size-xxxl: 32px;
+    --font-size-xxxxl: 36px;
+    --font-size-xxxxxl: 48px;
+    --font-size-xxxxxxl: 60px;
+    --font-size-xxxxxxxl: 112px;
+
+    --font-weight-xs: 300;
+    --font-weight-sm: 400;
+    --font-weight-md: 500;
+    --font-weight-lg: 700;
+    --font-weight-xl: 900;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 header {
 
 
 }
 .hero {
-    
+    background: linear-gradient(to right, var(--primary-color),var(--secondary-color));    
+    color: var(--text-color-light);
+    padding: 27px 15px 0 15px;
+    position: relative;
+    height: 640px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    z-index: 0;
+}
+.herotext {
+    position: absolute;
+    z-index: 2;
+    top: 5%;
+    left: 5%;
+}
+.year {
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-sm);
+    line-height: 100%;
+    opacity: 0.3;
+} 
+.title {
+    font-size: var(--font-size-xxxxxxl);
+    font-weight: var(--font-weight-xl);
+    line-height: 85%;
+    margin: 12px 0;
+}
+.subtext {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-sm);
+    line-height: 100%;
+    opacity: 0.8;
+    margin: 0;
+}
+.button {
+    background: var(--quinary-color);
+    color: var(--text-color-dark);
+    font-size: var(--font-size-xxs);
+    font-weight: var(--font-weight-sm);
+    line-height: 100%;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 6px;
+    margin-top: 24px;
+    display: inline-block;
+}
+.imagewrapper {
+    position: relative;
+    z-index: 0;
+}
+.heroimage {
+    height: 391px;  
+}
+.bgcircle {
+    position: absolute;
+    width: 193px;
+    aspect-ratio: 1/1;
+    background: var(--quaternary-color);
+    border-radius: 50%;
+    z-index: -1;
+    right: -20%;
+    bottom: 40%;
+}
+.secondcircle {
+    left: -20%;
+    bottom: 20%;
+}
+
+.navbar ul {
+    background-color: var(--quinary-color);
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    fill: var(--septenary-color);
+    fill-opacity: 80%;
+    z-index: 999;
+}
+.logobar {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 12px 15px;
+    fill: var(--text-color-light);
+    background-color: var(--text-color-dark);
+}
+.logobar svg {
+    height: 10px;
+    width: auto;
+
 }
