@@ -39,11 +39,12 @@ body {margin: 0;
     --font-size-lg: 25px;
     --font-size-xl: 26px;
     --font-size-xxl: 30px;
-    --font-size-xxxl: 32px;
-    --font-size-xxxxl: 36px;
-    --font-size-xxxxxl: 48px;
-    --font-size-xxxxxxl: 60px;
-    --font-size-xxxxxxxl: 112px;
+    --font-size-3xl: 32px;
+    --font-size-4xl: 36px;
+    --font-size-5xl: 48px;
+    --font-size-6xl: 60px;
+    --font-size-7xl: 64px;
+    --font-size-8xl: 112px;
 
     --font-weight-xs: 300;
     --font-weight-sm: 400;
@@ -66,7 +67,6 @@ header {
     color: var(--text-color-light);
     padding: 27px 15px 0 15px;
     position: relative;
-    height: 640px;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -85,7 +85,7 @@ header {
     opacity: 0.3;
 } 
 .title {
-    font-size: var(--font-size-xxxxxxl);
+    font-size: var(--font-size-6xl);
     font-weight: var(--font-weight-xl);
     line-height: 85%;
     margin: 12px 0;
@@ -112,8 +112,13 @@ header {
     margin-top: 24px;
 }
 .imagewrapper {
+    margin-top: 225px;
     position: relative;
     z-index: 0;
+    text-align: center;
+}
+.imagewrapper input {
+    display: none;
 }
 .heroimage {
     height: 391px;  
@@ -125,12 +130,18 @@ header {
     background: var(--quaternary-color);
     border-radius: 50%;
     z-index: -1;
-    right: -20%;
-    bottom: 40%;
+    right: 0;
+    bottom: 35%;
 }
 .secondcircle {
-    left: -20%;
+    left: 0;
     bottom: 20%;
+}
+.hero-price {
+    display: none;
+}
+.hero-discount {
+    display: none;
 }
 .navbar {
     background-color: var(--quinary-color);
@@ -141,11 +152,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     fill: var(--septenary-color);
     fill-opacity: 80%;
     z-index: 999;
+    background-color: var(--quinary-color);
+
 }
 .logobar {
     padding: 12px 0;
@@ -162,13 +175,19 @@ header {
     width: auto;
     fill: var(--text-color-light);
 }
+.hero-slide {
+    display: none;
+}
+.arrow-wrapper {
+    display: none;
+}
 .newcollection {
     padding-top: 32px;
     padding-bottom: 32px;
 }
 .secondary-title {
     font-weight: var(--font-weight-sm);
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-3xl);
     line-height: 100%;
     letter-spacing: 0%;
     margin:0 0 32px 0;
@@ -179,7 +198,7 @@ header {
     position: relative;
 }
 .jacket {
-    background-color: #C5C2CA;
+    background-color: var(--senary-color);
 }
 .wrappertext {
     font-size: var(--font-size-sm);
@@ -192,6 +211,7 @@ header {
     display: block;
     margin: 0 auto;
 }
+
 .dark {
     background: var(--text-color-dark);
     color: var(--text-color-light);
@@ -231,12 +251,14 @@ header {
     padding-bottom: 32px;
 }
 .slider {
-    display: inline-flex;
+    width: 100%;
+    display: inline-flex; 
     overflow-x: scroll;
     gap: 35px;
 }
 .slider li {
     width: 228px;
+    flex-shrink: 0;
 }
 .more {
     display: none;
@@ -323,7 +345,7 @@ header {
     align-items: center;
 
 }
-.item-details a {
+.add-to-cart {
     width: 30px;
     aspect-ratio: 1/1;;
     padding: 7px;
@@ -338,7 +360,7 @@ header {
 .timer {
     background-color: var(--tertiary-color);
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 60px;
 }
 .timer .container {
     display: flex;
@@ -357,7 +379,7 @@ header {
 }
 .timer-title {
     font-weight: var(--font-weight-lg);
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-3xl);
     line-height: 100%;
     letter-spacing: 0%;
     margin: 0 auto 32px auto;
@@ -398,17 +420,141 @@ header {
         padding-left: 0;
     }
     header {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+
     .logo {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xxxxl);
+    font-size: var(--font-size-4xl);
     line-height: 150%;
     letter-spacing: 0%;
     }
-    .hero {
+    header ul {
+        display: flex;
+        gap: 32px;
+    }
+    header ul li a {
+        text-decoration: none;
+        color: var(--text-color-light);
+        opacity: 30%;
+    }
+    header ul li a:hover {
+        opacity: 100%;
+    }
+ 
+    header .add-to-cart {
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        width: 40px;
+        padding: 10px;
 
+    }  
+    .hero {
+        display: block;
+        padding: 24px 0 0 0;
+
+    }
+    .hero .container{
+        display: flex;
+        justify-content: space-between;
     
+    }
+    .herotext {
+        position: static;
+        align-self: center;
+    }
+    .year {
+    font-size: var(--font-size-6xl);
+    } 
+    .title {
+    font-size: var(--font-size-8xl);
+    letter-spacing: 130%;
+    margin: 24px 0;
+    text-wrap: wrap;
+    }
+    .subtext {
+    font-size: var(--font-size-lg);
+    margin: 0;
+    }
+    .collection {
+        margin-top: 50px;
+
+    }
+    .imagewrapper {
+        margin-top: 63px;
+        display: flex;
+        gap: 190px;  
+    }
+    .heroimage {
+        height: 620px;
+    }
+    .bgcircle {
+        width: 310px;
+        left: 20%;
+        bottom: 35%;
+    }
+    .secondcircle {
+    left: -20%;
+    bottom: 20%;
+    }
+    .hero-slide {
+        margin-top: 190px;
+        display: block;
+    }
+  
+    .slidecounter {
+        background-color: var(--text-color-light);
+        width: 21px;
+        margin-bottom: 21px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        opacity: 20%;
+    }
+    .hero-price {
+        font-weight: var(--font-weight-md);
+        font-size: var(--font-size-4xl);
+        position: absolute;
+        top: 80px;
+        left: -30px;
+        display: inline-block
+
+    }
+    .hero-discount {
+        font-weight: var(--font-weight-lg);
+        font-size: var(--font-size-xl);
+        position: absolute;
+        top: 140px;
+        left: 0;
+        display: inline-block;
+        text-align: center;
+        width: 110px;
+        aspect-ratio: 1/1;
+        background-color: #FDDE67;
+        border-radius: 50%;
+        text-wrap: wrap;
+        color: var(--text-color-dark);
+        padding: 20px 10px;
+    }
+    .arrow-wrapper {
+        position: absolute;
+        display: flex;
+        gap: 15px;
+        bottom: 32px;
+        left: 0;
+    }
+    .arrow-wrapper svg {
+        border: solid 2px var(--text-color-light);
+        opacity: 30%;
+        border-radius: 50%;
+    }
+    .arrow-right {
+        transform: rotateY(180deg);
+    }
+    .arrow-wrapper svg:hover {
+        opacity: 100%;
+        cursor: pointer;
     }
     .button.collection:hover {
         background-color: var(--denary-color);
@@ -435,6 +581,9 @@ header {
         display: flex;
         gap: 80px;
     }
+    .wrappertext {
+    font-size: var(--font-size-md);
+    }
     .wrapper.jacket {
         flex-grow: 1
     }
@@ -442,6 +591,22 @@ header {
         flex-grow: 3;
         margin: 0;
     }
+    .shadestext {
+        top: 72px;
+        right: 92px;
+        line-height: 150%;
+    }
+    .jacketimg {
+        width: 278px;
+    }
+    .shadesimg {
+    width: 455px;
+    }
+    .discount {
+        font-size: var(--font-size-5xl);
+        right: 98px;
+    }
+
     .button.dark:hover {
         background-color: var(--nonary-color);
         cursor: pointer;
@@ -456,8 +621,7 @@ header {
         flex-wrap: wrap;
         row-gap: 30px;
         margin-bottom: 70px;
-        overflow-x: hidden;
-        
+        overflow-x: hidden; 
     }
     .slider ul {
         margin: 0 -12.5px;
@@ -478,10 +642,9 @@ header {
         padding-bottom: 78px;
     }
     .timer-title {
-        font-size: 64px;
+        font-size: var(--font-size-7xl);
         margin: 0 auto 93px auto;
         text-align: left;
-
     }
     .timer-wrapper {
         margin: 0 -24px;
@@ -491,7 +654,7 @@ header {
         padding: 0 24px;
     }
     .timer-discount {
-        font-size: 64px;
+        font-size: var(--font-size-7xl);
         font-weight: var(--font-weight-lg);
         line-height: 48px;
         margin: 0 auto 32px 0;
@@ -500,7 +663,7 @@ header {
         display: block;
     }
     .timer-number {
-        font-size: 64px;
+        font-size: var(--font-size-7xl);
         font-weight: var(--font-weight-lg);
     }
     .timer-text {
