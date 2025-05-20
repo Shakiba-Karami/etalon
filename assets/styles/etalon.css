@@ -398,7 +398,11 @@ header {
     right: 16px;
     fill: var(--septenary-color);
 }
-
+.item-wrapper svg:hover {
+    fill: red;
+    stroke: none;
+    cursor: pointer; 
+}
 .item-wrapper input:checked~label svg {
     fill: red;
     stroke: none;
