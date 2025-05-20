@@ -399,7 +399,7 @@ header {
     fill: var(--septenary-color);
 }
 .item-wrapper svg:hover {
-    fill: red;
+    checkfill: red;
     stroke: none;
     cursor: pointer; 
 }
